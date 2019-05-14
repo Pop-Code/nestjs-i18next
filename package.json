@@ -20,7 +20,7 @@
     "@nestjs/common": "^6"
   },
   "dependencies": {
-    "i18n-iso-countries": "^4.0.0",
+    "i18n-iso-countries": "4.0.0",
     "i18next": "15.0.9"
   },
   "devDependencies": {
@@ -39,6 +39,6 @@
     "typedoc": "0.14.2",
     "typescript": "3.4.4",
     "@types/i18next": "12.1.0",
-    "@types/mongodb": "^3.1.26"
+    "@types/mongodb": "3.1.26"
   }
 }
