@@ -459,7 +459,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/mongodb@^3.1.26":
+"@types/mongodb@3.1.26":
   version "3.1.26"
   resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.1.26.tgz#6877554353fd9e9d03f28c62de09bad616ed7142"
   integrity sha512-i7+l95IbqnGLRW+AJ6F2nzqosLUgU022lDuoHhbQquMV7tgek0vNUg9RwC2Fn7ImBSQSFdCWeU394ciPEwSeaQ==
@@ -1688,7 +1688,7 @@ https-proxy-agent@^2.2.1:
     agent-base "^4.1.0"
     debug "^3.1.0"
 
-i18n-iso-countries@^4.0.0:
+i18n-iso-countries@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-4.0.0.tgz#56d9d2fe132208294a7823f06a312c767b32e512"
   integrity sha512-DL3U2/rW4EJKXqNofuB/mHfxaca/0gwoGc7mJblvvjkNadlfWzaPaQHtC0/Cabg4SCM9+zJpl80trKx3dRY9VQ==
