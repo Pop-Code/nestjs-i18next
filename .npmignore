@@ -1,0 +1,7 @@
+src
+doc
+jest.config.js
+tsconfig.*
+typedoc.js
+.git
+.gitignore

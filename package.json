@@ -1,0 +1,44 @@
+{
+  "name": "nestjs-i18next",
+  "version": "0.0.1",
+  "description": "The nestjs translator modulde",
+  "author": "Alex Hermann <alex.hermann@pop-code.com>",
+  "repository": "https://github.com/Pop-Code/nestjs-i18next.git",
+  "private": true,
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rm -Rf build && tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:e2e:debug": "node --inspect-brk  node_modules/.bin/jest --config ./test/jest-e2e.json"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6"
+  },
+  "dependencies": {
+    "i18n-iso-countries": "^4.0.0",
+    "i18next": "15.0.9"
+  },
+  "devDependencies": {
+    "@nestjs/common": "6.1.1",
+    "@nestjs/core": "6.1.1",
+    "@nestjs/testing": "6.1.1",
+    "@types/jest": "24.0.11",
+    "@types/ora": "3.2.0",
+    "codecov": "3.3.0",
+    "jest": "24.7.1",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.4.0",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.1.0",
+    "tsconfig-paths": "3.8.0",
+    "typedoc": "0.14.2",
+    "typescript": "3.4.4",
+    "@types/i18next": "12.1.0",
+    "@types/mongodb": "^3.1.26"
+  }
+}
