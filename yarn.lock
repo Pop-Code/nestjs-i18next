@@ -1693,10 +1693,10 @@ i18n-iso-countries@4.0.0:
   resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-4.0.0.tgz#56d9d2fe132208294a7823f06a312c767b32e512"
   integrity sha512-DL3U2/rW4EJKXqNofuB/mHfxaca/0gwoGc7mJblvvjkNadlfWzaPaQHtC0/Cabg4SCM9+zJpl80trKx3dRY9VQ==
 
-i18next@15.0.9:
-  version "15.0.9"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.9.tgz#42536407a921bb5a8535a4c090a26f16827a1884"
-  integrity sha512-IdVj7DqErUuMbGuj2dFT431T7zKlmDci63eae6pNA/bMwgBZKT74/KnwHXE0WH7ivo2EV/LNme4pP4Yw6vB79w==
+i18next@16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-16.0.0.tgz#57dbaae4558a8a476c5edf058a97272130c61621"
+  integrity sha512-2kR0Bh1j0PxFQXNxgLjGdC1REPnwEK9bgmYsRR9w+kD4hQ5V40kwxKWNoC8RKpvHL45XoavBfOjWd470aFlWOQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
