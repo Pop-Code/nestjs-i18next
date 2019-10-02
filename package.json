@@ -35,7 +35,7 @@
     "rxjs": "6.4.0",
     "ts-jest": "24.0.2",
     "ts-node": "8.1.0",
-    "tsconfig-paths": "3.8.0",
+    "tsconfig-paths": "3.9.0",
     "typedoc": "0.14.2",
     "typescript": "3.4.4",
     "@types/i18next": "12.1.0",
