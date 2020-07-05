@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "i18n-iso-countries": "4.0.0",
-    "i18next": "15.0.9"
+    "i18next": "19.5.4"
   },
   "devDependencies": {
     "@nestjs/common": "6.1.1",
