@@ -459,10 +459,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/mongodb@3.1.26":
-  version "3.1.26"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.1.26.tgz#6877554353fd9e9d03f28c62de09bad616ed7142"
-  integrity sha512-i7+l95IbqnGLRW+AJ6F2nzqosLUgU022lDuoHhbQquMV7tgek0vNUg9RwC2Fn7ImBSQSFdCWeU394ciPEwSeaQ==
+"@types/mongodb@3.5.25":
+  version "3.5.25"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.25.tgz#ab187db04d79f8e3f15af236327dc9139d9d4736"
+  integrity sha512-2H/Owt+pHCl9YmBOYnXc3VdnxejJEjVdH+QCWL5ZAfPehEn3evygKBX3/vKRv7aTwfNbUd0E5vjJdQklH/9a6w==
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
