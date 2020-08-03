@@ -37,7 +37,7 @@
     "ts-node": "8.1.0",
     "tsconfig-paths": "3.8.0",
     "typedoc": "0.14.2",
-    "typescript": "3.4.4",
+    "typescript": "3.9.6",
     "@types/i18next": "12.1.0",
     "@types/mongodb": "3.1.26"
   }
