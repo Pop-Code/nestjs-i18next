@@ -20,7 +20,7 @@
     "@nestjs/common": "^6"
   },
   "dependencies": {
-    "i18n-iso-countries": "4.0.0",
+    "i18n-iso-countries": "6.0.0",
     "i18next": "15.0.9"
   },
   "devDependencies": {
