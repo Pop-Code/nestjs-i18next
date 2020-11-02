@@ -16,10 +16,14 @@ export class TranslatorModule {
         const translatorProvider = {
             provide: getTranslatorFunctionToken(),
             inject: [configProvider],
-            useFactory: async (options: InitOptions) => {
+            useFactory: async (opts: InitOptions) => {
+                // this allow us to apply middleware
+                if (options.init !== undefined) {
+                    options.init(i18next);
+                }
                 i18next.init({
-                    whitelist: options.resources ? Object.keys(options.resources) : [],
-                    resources: options.resources,
+                    whitelist: opts.resources ? Object.keys(opts.resources) : [],
+                    resources: opts.resources,
                     fallbackLng: 'en-US',
                     lng: 'en-US',
                     ...options
