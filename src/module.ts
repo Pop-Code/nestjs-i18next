@@ -15,7 +15,7 @@ export class TranslatorModule {
 
         const translatorProvider = {
             provide: getTranslatorFunctionToken(),
-            inject: [configProvider],
+            inject: [getConfigToken()],
             useFactory: async (opts: InitOptions) => {
                 // this allow us to apply middleware
                 if (options.init !== undefined) {
@@ -26,23 +26,18 @@ export class TranslatorModule {
                     resources: opts.resources,
                     fallbackLng: 'en-US',
                     lng: 'en-US',
-                    ...options
+                    ...opts
                 });
                 return i18next;
             }
         };
 
-        const i18nextProvider = {
-            provide: 'i18n',
-            useValue: i18next
-        };
-
-        const providers: any[] = [configProvider, i18nextProvider, translatorProvider, TranslatorService];
+        const providers: any[] = [configProvider, translatorProvider, TranslatorService];
 
         return {
             module: TranslatorModule,
             providers: providers,
-            exports: [configProvider, i18nextProvider, TranslatorService]
+            exports: [configProvider, translatorProvider, TranslatorService]
         };
     }
 }

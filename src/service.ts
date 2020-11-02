@@ -1,13 +1,13 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { i18n, TFunction } from 'i18next';
+import { Injectable } from '@nestjs/common';
+import { i18n } from 'i18next';
 
 import { InjectTranslatorFunction } from './decorators';
 
 @Injectable()
 export class TranslatorService {
-    constructor(@Inject('i18n') protected i18next: i18n, @InjectTranslatorFunction() protected translator: TFunction) {}
+    constructor(@InjectTranslatorFunction() protected i18next: i18n) {}
 
-    getTranslator(): TFunction {
-        return this.translator;
+    getInstance(): i18n {
+        return this.i18next;
     }
 }

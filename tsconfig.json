@@ -6,6 +6,7 @@
         "noImplicitAny": false,
         "noUnusedLocals": false,
         "removeComments": true,
+        "esModuleInterop": true,
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
