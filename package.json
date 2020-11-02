@@ -1,11 +1,11 @@
 {
     "name": "nestjs-i18next",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "The nestjs translator modulde",
     "author": "Alex Hermann <alex.hermann@pop-code.com>",
     "repository": "https://github.com/Pop-Code/nestjs-i18next.git",
-    "private": true,
     "main": "dist/index.js",
+    "license": "MIT",
     "scripts": {
         "build": "rm -Rf ./dist && tsc -b",
         "doc": "rm -Rf ./docs && typedoc ./src && touch ./docs/.nojekyll",
