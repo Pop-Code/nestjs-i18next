@@ -1,19 +1,19 @@
 module.exports = {
     mode: 'modules',
     out: 'docs',
-    exclude: ['**/test/**'],
+    exclude: ['**/test/**/*'],
     theme: 'default',
-    name: 'Couriier Code Documentation',
+    name: 'NestJS Console',
     ignoreCompilerErrors: false,
-    excludeExternals: true,
     excludePrivate: false,
     excludeNotExported: false,
     target: 'ES6',
     moduleResolution: 'node',
-    preserveConstEnums: true,
+    preserveConstEnums: false,
     stripInternal: false,
     suppressExcessPropertyErrors: true,
     suppressImplicitAnyIndexErrors: true,
     module: 'commonjs',
-    hideGenerator: true
+    hideGenerator: true,
+    mode: 'modules'
 };

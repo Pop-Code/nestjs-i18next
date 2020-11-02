@@ -1,22 +1,19 @@
-import { Module, DynamicModule } from '@nestjs/common';
-import { TranslatorService } from './service';
-import i18next from 'i18next';
+import { DynamicModule, Module } from '@nestjs/common';
 import { FactoryProvider } from '@nestjs/common/interfaces';
+import i18next, { InitOptions } from 'i18next';
+
 import { getTranslatorFunctionToken } from './helpers';
+import { TranslatorService } from './service';
 
 @Module({})
 export class TranslatorModule {
-    static forRootAsync(
-        optionsFactory?: FactoryProvider<i18next.InitOptions>
-    ): DynamicModule {
+    static forRootAsync(optionsFactory?: FactoryProvider<InitOptions>): DynamicModule {
         const translatorProvider = {
             provide: getTranslatorFunctionToken(),
             inject: optionsFactory ? [optionsFactory.provide] : [],
-            useFactory: async (options: i18next.InitOptions) => {
+            useFactory: async (options: InitOptions) => {
                 i18next.init({
-                    whitelist: options.resources
-                        ? Object.keys(options.resources)
-                        : [],
+                    whitelist: options.resources ? Object.keys(options.resources) : [],
                     resources: options.resources,
                     fallbackLng: 'en-US',
                     lng: 'en-US',
@@ -30,11 +27,7 @@ export class TranslatorModule {
             useValue: i18next
         };
 
-        const providers: any[] = [
-            i18nextProvider,
-            translatorProvider,
-            TranslatorService
-        ];
+        const providers: any[] = [i18nextProvider, translatorProvider, TranslatorService];
 
         if (optionsFactory) providers.push(optionsFactory);
 
