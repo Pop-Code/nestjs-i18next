@@ -1,4 +1,4 @@
-import { DynamicModule, Module } from '@nestjs/common';
+import { DynamicModule, Global, Module } from '@nestjs/common';
 import i18next, { InitOptions } from 'i18next';
 
 import { getConfigToken, getTranslatorFunctionToken } from './helpers';
@@ -6,6 +6,7 @@ import { AsyncInitOptions } from './interfaces';
 import { TranslatorService } from './service';
 
 @Module({})
+@Global()
 export class TranslatorModule {
     static forRootAsync(options?: AsyncInitOptions): DynamicModule {
         const configProvider = {
