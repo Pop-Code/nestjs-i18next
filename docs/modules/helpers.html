@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/helpers&quot; | NestJS Console</title>
-	<meta name="description" content="Documentation for NestJS Console">
+	<title>helpers | Nestjs-i18next</title>
+	<meta name="description" content="Documentation for Nestjs-i18next">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -22,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">NestJS Console</a>
+					<a href="../index.html" class="title">Nestjs-i18next</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -53,13 +52,13 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">Nestjs-i18next</a>
 				</li>
 				<li>
-					<a href="_src_helpers_.html">&quot;src/helpers&quot;</a>
+					<a href="helpers.html">helpers</a>
 				</li>
 			</ul>
-			<h1>Module &quot;src/helpers&quot;</h1>
+			<h1>Module helpers</h1>
 		</div>
 	</div>
 </header>
@@ -73,8 +72,10 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_helpers_.html#getconfigtoken" class="tsd-kind-icon">get<wbr>Config<wbr>Token</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_helpers_.html#gettranslatorfunctiontoken" class="tsd-kind-icon">get<wbr>Translator<wbr>Function<wbr>Token</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers.html#getbundleoptionstoken" class="tsd-kind-icon">get<wbr>Bundle<wbr>Options<wbr>Token</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers.html#getbundletoken" class="tsd-kind-icon">get<wbr>Bundle<wbr>Token</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers.html#getconfigtoken" class="tsd-kind-icon">get<wbr>Config<wbr>Token</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers.html#geti18ntoken" class="tsd-kind-icon">get<wbr>I18n<wbr>Token</a></li>
 							</ul>
 						</section>
 					</div>
@@ -82,6 +83,52 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getbundleoptionstoken" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Bundle<wbr>Options<wbr>Token</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bundle<wbr>Options<wbr>Token<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/1ba1887/src/helpers.ts#L6">src/helpers.ts:6</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getbundletoken" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Bundle<wbr>Token</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bundle<wbr>Token<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/1ba1887/src/helpers.ts#L5">src/helpers.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="getconfigtoken" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Config<wbr>Token</h3>
@@ -92,7 +139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/5ddc812/src/helpers.ts#L5">src/helpers.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/1ba1887/src/helpers.ts#L4">src/helpers.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -100,16 +147,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="gettranslatorfunctiontoken" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Translator<wbr>Function<wbr>Token</h3>
+					<a name="geti18ntoken" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>I18n<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Translator<wbr>Function<wbr>Token<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>I18n<wbr>Token<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/5ddc812/src/helpers.ts#L3">src/helpers.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/Pop-Code/nestjs-i18next/blob/1ba1887/src/helpers.ts#L3">src/helpers.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -121,39 +168,45 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_constants_.html">&quot;src/constants&quot;</a>
+						<a href="constants.html">constants</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_decorators_.html">&quot;src/decorators&quot;</a>
+						<a href="decorators.html">decorators</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_src_helpers_.html">&quot;src/helpers&quot;</a>
+						<a href="helpers.html">helpers</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_index_.html">&quot;src/index&quot;</a>
+						<a href="index.html">index</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_interfaces_.html">&quot;src/interfaces&quot;</a>
+						<a href="interfaces.html">interfaces</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_module_.html">&quot;src/module&quot;</a>
+						<a href="module.html">module</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_src_service_.html">&quot;src/service&quot;</a>
+						<a href="service.html">service</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_src_helpers_.html#getconfigtoken" class="tsd-kind-icon">get<wbr>Config<wbr>Token</a>
+						<a href="helpers.html#getbundleoptionstoken" class="tsd-kind-icon">get<wbr>Bundle<wbr>Options<wbr>Token</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_src_helpers_.html#gettranslatorfunctiontoken" class="tsd-kind-icon">get<wbr>Translator<wbr>Function<wbr>Token</a>
+						<a href="helpers.html#getbundletoken" class="tsd-kind-icon">get<wbr>Bundle<wbr>Token</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers.html#getconfigtoken" class="tsd-kind-icon">get<wbr>Config<wbr>Token</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers.html#geti18ntoken" class="tsd-kind-icon">get<wbr>I18n<wbr>Token</a>
 					</li>
 				</ul>
 			</nav>
