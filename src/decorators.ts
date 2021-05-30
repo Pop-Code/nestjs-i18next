@@ -1,5 +1,5 @@
 import { Inject } from '@nestjs/common';
 
-import { getTranslatorFunctionToken } from './helpers';
+import { getI18nToken } from './helpers';
 
-export const InjectTranslatorFunction = (): ParameterDecorator => Inject(getTranslatorFunctionToken());
+export const InjectI18n = (): ParameterDecorator => Inject(getI18nToken());

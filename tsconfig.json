@@ -15,7 +15,8 @@
         "allowJs": true,
         "outDir": "dist",
         "baseUrl": ".",
-        "lib": ["es7", "DOM"]
-    },
-    "include": ["src/**/*"]
+        "lib": ["es7", "DOM"],
+        "resolveJsonModule": true,
+        "strictNullChecks": true
+    }
 }

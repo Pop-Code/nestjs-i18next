@@ -1,44 +1,70 @@
 import { DynamicModule, Global, Module } from '@nestjs/common';
-import i18next, { InitOptions } from 'i18next';
+import i18next, { i18n, InitOptions } from 'i18next';
 
-import { getConfigToken, getTranslatorFunctionToken } from './helpers';
-import { AsyncInitOptions } from './interfaces';
+import { getBundleOptionsToken, getBundleToken, getConfigToken, getI18nToken } from './helpers';
+import { AsyncForFeatureOptions, AsyncInitOptions, ForFeatureOptions } from './interfaces';
 import { TranslatorService } from './service';
 
 @Module({})
 @Global()
 export class TranslatorModule {
-    static forRootAsync(options?: AsyncInitOptions): DynamicModule {
+    static forRootAsync(options: AsyncInitOptions): DynamicModule {
         const configProvider = {
-            provide: getConfigToken(),
-            ...options
+            ...options,
+            provide: getConfigToken()
         };
 
-        const translatorProvider = {
-            provide: getTranslatorFunctionToken(),
+        const i18nProvider = {
+            provide: getI18nToken(),
             inject: [getConfigToken()],
             useFactory: async (opts: InitOptions) => {
-                // this allow us to apply middleware
-                if (options.init !== undefined) {
+                if (options?.init !== undefined) {
                     options.init(i18next);
                 }
                 i18next.init({
-                    whitelist: opts.resources ? Object.keys(opts.resources) : [],
                     resources: opts.resources,
-                    fallbackLng: 'en-US',
-                    lng: 'en-US',
+                    fallbackLng: 'en',
+                    lng: 'en',
                     ...opts
                 });
                 return i18next;
             }
         };
 
-        const providers: any[] = [configProvider, translatorProvider, TranslatorService];
+        const providers: any[] = [configProvider, i18nProvider, TranslatorService];
 
         return {
             module: TranslatorModule,
             providers: providers,
-            exports: [configProvider, translatorProvider, TranslatorService]
+            exports: [configProvider, i18nProvider, TranslatorService]
+        };
+    }
+
+    static forFeatureAsync(options: AsyncForFeatureOptions): DynamicModule {
+        const bundleOptionsToken = getBundleOptionsToken(options.name);
+        const bundleOptionsProvider = {
+            ...options,
+            provide: bundleOptionsToken
+        };
+
+        const bundleToken = getBundleToken(options.name);
+        const bundleProvider = {
+            provide: bundleToken,
+            inject: [getI18nToken(), bundleOptionsToken],
+            useFactory: async (i18n: i18n, options: ForFeatureOptions) => {
+                for (const lang in options.resources) {
+                    const language = options.resources[lang];
+                    for (const ns in language) {
+                        const resource = language[ns];
+                        i18n.addResourceBundle(lang, ns, resource, true, true);
+                    }
+                }
+            }
+        };
+
+        return {
+            module: TranslatorModule,
+            providers: [bundleOptionsProvider, bundleProvider]
         };
     }
 }

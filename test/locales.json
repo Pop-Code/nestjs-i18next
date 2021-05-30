@@ -1,0 +1,16 @@
+{
+    "en": {
+        "translation": {
+            "foo": {
+                "bar": "bar-en"
+            }
+        }
+    },
+    "fr": {
+        "translation": {
+            "foo": {
+                "bar": "bar-fr"
+            }
+        }
+    }
+}

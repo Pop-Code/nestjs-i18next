@@ -7,43 +7,42 @@
     "main": "dist/index.js",
     "license": "MIT",
     "scripts": {
-        "build": "rm -Rf ./dist && tsc -b",
+        "build": "rm -Rf dist && tsc -b tsconfig.build.json",
+        "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
+        "lint": "eslint .",
         "doc": "rm -Rf ./docs && typedoc ./src && touch ./docs/.nojekyll",
         "test": "jest",
-        "test:build": "jest --testRegex .spec.js",
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
-        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest",
-        "lint": "eslint ./src/**/*.ts",
-        "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status"
+        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
     },
     "peerDependencies": {
-        "@nestjs/common": "^6 || ^7"
-    },
-    "dependencies": {
-        "i18next": "19.8.3"
+        "@nestjs/common": "^7",
+        "i18next": "20.3.1"
     },
     "devDependencies": {
-        "@nestjs/common": "7.4.4",
-        "@nestjs/core": "7.4.4",
-        "@nestjs/testing": "7.4.4",
-        "@types/jest": "26.0.15",
-        "codecov": "3.8.0",
-        "jest": "26.6.1",
+        "i18next": "20.3.1",
+        "@nestjs/common": "7.6.17",
+        "@nestjs/core": "7.6.17",
+        "@nestjs/testing": "7.6.17",
+        "@types/jest": "26.0.23",
+        "@types/node": "15.6.1",
+        "codecov": "3.8.2",
+        "jest": "27.0.3",
         "reflect-metadata": "0.1.13",
-        "rxjs": "6.6.3",
-        "ts-jest": "26.4.3",
-        "ts-node": "9.0.0",
+        "rxjs": "6.6.7",
+        "ts-jest": "27.0.1",
+        "ts-node": "10.0.0",
         "tsconfig-paths": "3.9.0",
-        "typedoc": "0.19.2",
-        "typescript": "4.0.5",
-        "@typescript-eslint/eslint-plugin": "4.6.0",
-        "@typescript-eslint/parser": "4.6.0",
-        "prettier": "2.1.2",
-        "eslint": "7.12.1",
-        "eslint-config-prettier": "6.15.0",
-        "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-prefer-arrow": "1.2.2"
+        "typedoc": "0.20.36",
+        "typescript": "4.3.2",
+        "@typescript-eslint/eslint-plugin": "4.25.0",
+        "@typescript-eslint/parser": "4.25.0",
+        "prettier": "2.3.0",
+        "eslint": "7.27.0",
+        "eslint-config-prettier": "8.3.0",
+        "eslint-plugin-import": "2.23.4",
+        "eslint-plugin-prefer-arrow": "1.2.3"
     },
     "jest": {
         "moduleFileExtensions": [
@@ -57,9 +56,9 @@
             "^.+\\.(t|j)s$": "ts-jest"
         },
         "collectCoverageFrom": [
-            "src/**/*.{js,jsx,ts}",
-            "!src/index.ts",
-            "!**/test/**"
+            "**/*.ts",
+            "!test/**",
+            "!dist/**"
         ],
         "coverageDirectory": "./coverage"
     },
