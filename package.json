@@ -1,6 +1,6 @@
 {
     "name": "nestjs-i18next",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "The nestjs translator modulde",
     "author": "Alex Hermann <alex.hermann@pop-code.com>",
     "repository": "https://github.com/Pop-Code/nestjs-i18next.git",
@@ -18,7 +18,7 @@
     },
     "peerDependencies": {
         "@nestjs/common": "^7",
-        "i18next": "20.3.1"
+        "i18next": "^20.3.1"
     },
     "devDependencies": {
         "i18next": "20.3.1",
