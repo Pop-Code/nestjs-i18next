@@ -1,6 +1,6 @@
 {
     "name": "nestjs-i18next",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "description": "The nestjs translator modulde",
     "author": "Alex Hermann <alex.hermann@pop-code.com>",
     "repository": "https://github.com/Pop-Code/nestjs-i18next.git",
@@ -26,7 +26,7 @@
         "@nestjs/core": "7.6.17",
         "@nestjs/testing": "7.6.17",
         "@types/jest": "26.0.23",
-        "@types/node": "15.6.1",
+        "@types/node": "16.11.5",
         "codecov": "3.8.2",
         "jest": "27.0.3",
         "reflect-metadata": "0.1.13",
