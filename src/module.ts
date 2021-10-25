@@ -19,7 +19,7 @@ export class TranslatorModule {
             inject: [getConfigToken()],
             useFactory: async (opts: InitOptions) => {
                 if (options?.init !== undefined) {
-                    options.init(i18next);
+                    return options.init(i18next);
                 }
                 i18next.init({
                     resources: opts.resources,
