@@ -18,16 +18,22 @@ export class TranslatorModule {
             provide: getI18nToken(),
             inject: [getConfigToken()],
             useFactory: async (opts: InitOptions) => {
-                if (options?.init !== undefined) {
-                    return options.init(i18next);
-                }
-                i18next.init({
-                    resources: opts.resources,
-                    fallbackLng: 'en',
-                    lng: 'en',
-                    ...opts
+                return new Promise((resolve, reject) => {
+                    i18next.init(
+                        {
+                            resources: opts.resources,
+                            fallbackLng: 'en',
+                            lng: 'en',
+                            ...opts
+                        },
+                        (error) => {
+                            if (error) {
+                                return reject(error);
+                            }
+                            return resolve(i18next);
+                        }
+                    );
                 });
-                return i18next;
             }
         };
 
