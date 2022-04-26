@@ -1,4 +1,4 @@
-import { DynamicModule, Global, Module } from '@nestjs/common';
+import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import i18next, { i18n, InitOptions } from 'i18next';
 
 import { getBundleOptionsToken, getBundleToken, getConfigToken, getI18nToken } from './helpers';
@@ -37,7 +37,7 @@ export class TranslatorModule {
             }
         };
 
-        const providers: any[] = [configProvider, i18nProvider, TranslatorService];
+        const providers: Provider[] = [configProvider, i18nProvider, TranslatorService];
 
         return {
             module: TranslatorModule,

@@ -2,3 +2,6 @@ node_modules/
 dist/
 coverage
 *.log
+.yarn/cache
+.yarn/install-state.gz
+!.yarn/releases/yarn-3.2.0.cjs
